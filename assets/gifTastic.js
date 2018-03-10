@@ -46,13 +46,26 @@ function displayRatingInfo() {
         $('#heroes-view').empty();
 
             for(var i=0; i < results.length; i++) {
-// Only taking action if the photo has an appropriate rating =======***NOT WHAT I WANTED TO DO***=============================================
-                // if(results[i].rating === "g" || results[i].rating === "pg-13" || results[i].rating === "y" || results[i].rating === "r") {
-                // $('body').prepend("<p>Rating: "+response.data[i].rating+"</p>");
-                // $('body').prepend("<img src='"+response.data[i].images.fixed_height.url+"'>");
-// ===========================================================================================================================================
-                $('#heroes-view').prepend("<p>Rating: " + response.data[i].rating + "</p>");
-                $('#heroes-view').prepend("<img src='" + response.data[i].images.fixed_width_still.url + "'>");
+            // Creating a div to hold the heroes-form
+                var heroesDiv = $("<div class='superH'>"); 
+                var rating = results[i].rating;
+                // console.log(rating);
+                var p = $("<p>").text("Rating: " + rating);
+                var heroImage = $("<img>");
+
+                heroImage.attr("src", results[i].images.fixed_width_still.url);
+                heroImage.attr("data-still", results[i].images.fixed_width_still.url);
+                heroImage.attr("data-animate", results[i].images.fixed_width.url);
+                heroImage.attr("data-state", "still")
+                heroImage.attr("class", "pause")
+
+                heroesDiv.prepend(p);
+                heroesDiv.prepend(heroImage);
+
+                $('#heroes-view').prepend(heroesDiv);
+
+                // $('#heroes-view').prepend("<p>Rating: " + response.data[i].rating + "</p>");
+                // $('#heroes-view').prepend("<img src='" + response.data[i].images.fixed_width_still.url + "'>");
             }
         });
 };
@@ -66,9 +79,6 @@ $('#add-hero').on('click', function(event) {
     // event.preventDefault() prevents the form from trying to submit itself.
     // We're using a form so that the user can hit enter instead of clicking the button if they want
     event.preventDefault();
-
-    // Creating a div to hold the heroes-form
-    // var heroesDiv = $("<div class='superH'>");
 
     // This line will grab the text from the input box
     var hero = $("#heroes-input").val().trim();
@@ -84,8 +94,8 @@ $('#add-hero').on('click', function(event) {
     renderButtons();
 });
 
-$('#heroes-view').on('click', ".gif", function() {
-    alert("button clicked!")
+$('#heroes-view').on('click', '.pause', function() {
+    // alert("button clicked!")
    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
    var state = $(this).attr("data-state");
    console.log(state);
