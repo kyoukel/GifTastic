@@ -23,13 +23,13 @@ button,
     
 } */
 
-img, {
+.superH {
     float: left;
     margin: 15px;
 }
-
-p {
-    float: inherit;
+#heroes-view{
+    width:70%;
+    float:left;
 }
 
 form {
