@@ -116,8 +116,10 @@ function displayRatingInfo() {
 
             for(var i=0; i < results.length; i++) {
                 // if(results[i].rating === "g" || results[i].rating === "pg-13" || results[i].rating === "y" || results[i].rating === "r") {
-                $('body').prepend("<p>Rating: "+response.data[i].rating+"</p>");
-                $('body').prepend("<img src='"+response.data[i].images.fixed_height.url+"'>");
+                // $('body').prepend("<p>Rating: "+response.data[i].rating+"</p>");
+                // $('body').prepend("<img src='"+response.data[i].images.fixed_height.url+"'>");
+                $('#heroes-view').append("<p>Rating: " + response.data[i].rating + "</p>");
+                $('#heroes-view').prepend("<img src='" + response.data[i].images.fixed_height.url + "'>");
             }
         });
 };
