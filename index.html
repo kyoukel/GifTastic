@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>GifTastic</title>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/style/style.css">
 
 </head>
 <body>
 
     <div class="container">
         <!-- Rendered Buttons will get Dumped Here  -->
-        <div id="buttons-view" class"gif"></div>
+    <div class="row" id="center-buttons">
+        <div class="col-lg-12">
+            <div id="buttons-view"></div>
+        </div>
+    </div>
+
         <!-- Gifs will Get Dumped Here -->
-        <div id="heroes-view"></div>
+    <div class="row">
+        <div class="col-12 col-md-auto">    
+            <div id="heroes-view" class="gif"></div>
+        </div>
+    </div>
 
-        <form id="heroes-form"><br>
-            <label for="heroes-input">Add Your Favorite Super Hero</label><br>
-            <input type="text" id="heroes-input" placeholder="add a superhero"><br>
+    
+        <div class="col-col-lg-2">
+            <form id="heroes-form"><br>
+                <label for="heroes-input">Add Your Favorite Super Hero</label><br>
+                <input type="text" id="heroes-input" placeholder="add a superhero"><br>
 
-            <!-- Button triggers new hero to be added -->
-            <input id="add-hero" type="submit" class="btn btn-info mb-2" data-toggle="buttons" value="Submit">
-        </form>
+                <!-- Button triggers new hero to be added -->
+                <input id="add-hero" type="submit" class="btn btn-info mb-2" data-toggle="buttons" value="Submit">
+            </form>
+        </div>
+    
 
     </div>
     

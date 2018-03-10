@@ -1,0 +1,44 @@
+.container {
+    margin: 0 !important;
+}
+
+#center-buttons {
+    align-items: center;
+}
+
+button,
+    div,
+    form,
+    input {
+        margin: 5px;
+    } 
+
+/* body {
+    text-align: center;
+    font-size: 14px;
+} */
+
+/* button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+} */
+
+img, {
+    float: left;
+    margin: 15px;
+}
+
+p {
+    float: inherit;
+}
+
+form {
+    float: right;
+    /* position: relative; */
+}
+
+/* 
+* {
+margin: 0;
+padding: 0;
+/*}

@@ -13,7 +13,7 @@ function renderButtons() {
     for (var i = 0; i < superHeroes.length; i++) {
         // Then dynamicaly generating buttons for each hero in the array
         // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-        var b = $("<button>");
+        var b = $("<button class='btn btn-info'>");
         // Adding a class of hero-btn to our button
         b.addClass("hero-btn");
         // Adding a data-attribute
@@ -41,7 +41,7 @@ function displayRatingInfo() {
         method: 'GET'
     }).then(function(response) {
         var results = response.data;
-        // console.log(results);
+        console.log(results);
 
         $('#heroes-view').empty();
 
@@ -52,10 +52,12 @@ function displayRatingInfo() {
                 // $('body').prepend("<img src='"+response.data[i].images.fixed_height.url+"'>");
 // ===========================================================================================================================================
                 $('#heroes-view').prepend("<p>Rating: " + response.data[i].rating + "</p>");
-                $('#heroes-view').prepend("<img src='" + response.data[i].images.fixed_height_still.url + "'>");
+                $('#heroes-view').prepend("<img src='" + response.data[i].images.fixed_width_still.url + "'>");
             }
         });
 };
+
+// $('#buttons-view').on('click', '.gif', displayRatingInfo) 
 
 // This function handles events when the submit button is clicked
 $('#add-hero').on('click', function(event) {
@@ -65,6 +67,9 @@ $('#add-hero').on('click', function(event) {
     // We're using a form so that the user can hit enter instead of clicking the button if they want
     event.preventDefault();
 
+    // Creating a div to hold the heroes-form
+    // var heroesDiv = $("<div class='superH'>");
+
     // This line will grab the text from the input box
     var hero = $("#heroes-input").val().trim();
     // console.log(hero);
@@ -72,11 +77,14 @@ $('#add-hero').on('click', function(event) {
     // The superhero entered from the textbox is then added to our array
     superHeroes.push(hero);
 
+    // Putting the entire form above the previous gifs
+    // $("#heroes-form").prepend(heroesDiv);
+
     // calling renderButtons which handles the processing of our superHeroes array
     renderButtons();
 });
 
-$('.gif').on('click', function(event) {
+$('#heroes-view').on('click', ".gif", function() {
     alert("button clicked!")
    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
    var state = $(this).attr("data-state");
@@ -84,19 +92,23 @@ $('.gif').on('click', function(event) {
    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
    // Then, set the image's data-state to animate
    // Else set src to the data-still value
-   if (state === "still") {
-     $(this).attr("src", $(this).attr("data-animate"));
-     $(this).attr("data-state", "animate");
-   } else {
-     $(this).attr("src", $(this).attr("data-still"));
-     $(this).attr("data-state", "still");
-   }
+    if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
  });
 
 // ================EVENTS=================================
 // $(document).on('click', '#add-hero');
+
+// Added a click event listener to all elements with a class of "hero-btn"
 $(document).on('click', '.hero-btn', displayRatingInfo);
 // $(document).on('click', '', function() {} );
+
+// calling the renderButtons function
 renderButtons();
 
 
