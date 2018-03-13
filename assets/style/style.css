@@ -1,5 +1,6 @@
-.container {
+.container-fluid {
     margin: 0 !important;
+    width: 90%;
 }
 
 #center-buttons {
@@ -28,7 +29,7 @@ button,
     margin: 15px;
 }
 #heroes-view{
-    width:70%;
+    width: 80%;
     float:left;
 }
 

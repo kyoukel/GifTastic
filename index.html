@@ -11,32 +11,32 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
         <!-- Rendered Buttons will get Dumped Here  -->
-    <div class="row" id="center-buttons">
-        <div class="col-lg-12">
-            <div id="buttons-view"></div>
+        <div class="row" id="center-buttons">
+            <div class="col">
+                <div id="buttons-view"></div>
+            </div>
         </div>
-    </div>
 
         <!-- Gifs will Get Dumped Here -->
     <div class="row">
-        <div class="col-4 col-md-auto">    
-            <div id="heroes-view"></div>
-        </div>
-    </div>
+            <div class="col">    
+                <div id="heroes-view"></div>
+            </div>
+        
 
     
-        <div class="col-col-md-2">
+        <div class="form-group">
             <form id="heroes-form"><br>
                 <label for="heroes-input">Add Your Favorite Super Hero</label><br>
-                <input type="text" id="heroes-input" placeholder="add a superhero"><br>
+                <input type="text" class="span6 input-large search-query" id="heroes-input" placeholder="add a superhero"><br>
 
                 <!-- Button triggers new hero to be added -->
                 <input id="add-hero" type="submit" class="btn btn-info mb-2" data-toggle="buttons" value="Submit">
             </form>
         </div>
-    
+    </div>
 
     </div>
     

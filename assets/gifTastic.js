@@ -53,8 +53,8 @@ function displayRatingInfo() {
                 var p = $("<p>").text("Rating: " + rating);
                 var heroImage = $("<img>");
 
-                heroImage.attr("src", results[i].images.fixed_width_still.url);
-                heroImage.attr("data-still", results[i].images.fixed_width_still.url);
+                heroImage.attr("src", results[i].images.fixed_height_still.url);
+                heroImage.attr("data-still", results[i].images.fixed_height.url);
                 heroImage.attr("data-animate", results[i].images.fixed_width.url);
                 heroImage.attr("data-state", "still")
                 heroImage.attr("class", "pause")
