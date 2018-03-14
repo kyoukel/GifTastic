@@ -5,27 +5,27 @@ Overview
 
 Before You Begin
     Hit the GIPHY API.
-=====================================================================
+
         Fool around with the GIPHY API. Giphy API.
         Be sure to read about these GIPHY parameters (hint, hint):
            - q
            - limit
            - rating
-=====================================================================
-        Like many APIs, GIPHY requires developers to use a key to access their API data. To use the GIPHY API, you'll need a GIPHY account (don't worry, it's free!) and then obtain an API Key by creating an app.
-==============================================================================        
-        Make sure you switch the protocol in the query URL from http to https, or the app may not work properly when deployed to
-==============================================================================
-         Github Pages.
+
+    Like many APIs, GIPHY requires developers to use a key to access their API data. To use the GIPHY API, you'll need a GIPHY account (don't worry, it's free!) and then obtain an API Key by creating an app.
+    
+    Make sure you switch the protocol in the query URL from http to https, or the app may not work properly when deployed to
+
+    Github Pages.
 
     Watch the demo video
 
-You should have a high-level understanding of how this assignment works before attempting to code it.
+    You should have a high-level understanding of how this assignment works before attempting to code it.
 
 INSTRUCTIONS:
-=========================================================================================
+
     Before you can make any part of our site work, you need to create an array of strings, each one related to a topic that interests you. Save it to a variable called topics.
-========================================================
+
     We chose animals for our theme, but you can make a list to your own liking.
     Your app should take the topics in this array and create buttons in your HTML.
 
@@ -47,14 +47,3 @@ INSTRUCTIONS:
 MINIMUM REQUIREMENTS:
 
     Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
-
-Create a README.md:
-
-    Add a README.md to your repository describing the project. Here are some resources for creating your README.md. Here are some resources to help you along the way:
-
-        About READMEs
-        Mastering Markdown
-
-Add To Your Portfolio:
-
-    After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
