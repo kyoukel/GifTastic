@@ -3,8 +3,9 @@
     width: 90%;
 }
 
-#center-buttons {
-    align-items: center;
+#buttons-view {
+    width: 75%;
+   
 }
 
 button,
@@ -14,15 +15,28 @@ button,
         margin: 5px;
     } 
 
-/* body {
-    text-align: center;
-    font-size: 14px;
-} */
+#heroes-input {
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-/* button {
+#textOnly {
+    font-size: 22px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-} */
+    margin-left: 5px;
+}
+
+body {
+    font-size: 14px;
+}
+
+.hero-btn,
+#add-hero {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
 
 .superH {
     float: left;
@@ -38,12 +52,7 @@ form {
     /* position: relative; */
 }
 
-/* #heroes-form {
-    margin-top: -1500px;
-} */
+.form-group {
+    width: 100%;
+}
 
-/* 
-* {
-margin: 0;
-padding: 0;
-/*}

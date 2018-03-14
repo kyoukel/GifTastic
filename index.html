@@ -24,13 +24,12 @@
             <div class="col">    
                 <div id="heroes-view"></div>
             </div>
-        
-
     
+    <!-- Form that holds new superhero searches & text -->
         <div class="form-group">
             <form id="heroes-form"><br>
-                <label for="heroes-input">Add Your Favorite Super Hero</label><br>
-                <input type="text" class="span6 input-large search-query" id="heroes-input" placeholder="add a superhero"><br>
+                <label for="heroes-input" id="textOnly">Add Your Favorite Super Hero</label><br>
+                <input type="text" id="heroes-input" placeholder="add a superhero" autocomplete="off"><br>
 
                 <!-- Button triggers new hero to be added -->
                 <input id="add-hero" type="submit" class="btn btn-info mb-2" data-toggle="buttons" value="Submit">

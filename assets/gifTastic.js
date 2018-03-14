@@ -1,4 +1,8 @@
 
+$(function() {
+    // console.log("page loaded");
+})
+
 // Initial array of super heroes
 var superHeroes = ["Wonder Woman", "Hulk", "Captain America", "Superman", "Thor", "Iron Man", "Spider-Man", "Guardians of the Galaxy", "Deadpool", "Batman", "X-Men", "Ant-Man", "Black Panther", "Suicide Squad", "The Flash", "Supergirl", "Green Lantern", "Daredevil", "Elektra", "She-Ra"];
 
@@ -41,7 +45,7 @@ function displayRatingInfo() {
         method: 'GET'
     }).then(function(response) {
         var results = response.data;
-        console.log(results);
+        // console.log(results);
 
         $('#heroes-view').empty();
 
@@ -54,8 +58,8 @@ function displayRatingInfo() {
                 var heroImage = $("<img>");
 
                 heroImage.attr("src", results[i].images.fixed_height_still.url);
-                heroImage.attr("data-still", results[i].images.fixed_height.url);
-                heroImage.attr("data-animate", results[i].images.fixed_width.url);
+                heroImage.attr("data-still", results[i].images.fixed_height_still.url);
+                heroImage.attr("data-animate", results[i].images.fixed_height.url);
                 heroImage.attr("data-state", "still")
                 heroImage.attr("class", "pause")
 
@@ -98,7 +102,7 @@ $('#heroes-view').on('click', '.pause', function() {
     // alert("button clicked!")
    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
    var state = $(this).attr("data-state");
-   console.log(state);
+//    console.log(state);
    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
    // Then, set the image's data-state to animate
    // Else set src to the data-still value
