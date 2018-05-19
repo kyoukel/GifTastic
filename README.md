@@ -6,12 +6,10 @@
 
 ## Before You Begin:
 
-Hit the GIPHY API.
-
-    Fool around with the GIPHY API. Giphy API. Be sure to read about these GIPHY parameters (hint, hint):
-     - q
-     - limit
-     - rating
+Hit the GIPHY API. Fool around with the GIPHY API. Giphy API. Be sure to read about these GIPHY parameters (hint, hint):
+* q
+* limit
+* rating
 
 * Like many `APIs`, `GIPHY` requires developers to use a `key` to **access their API data**. 
 * To use the GIPHY API, you'll **need a GIPHY account** (don't worry, it's free!) and then `obtain an API Key by creating an app`.
@@ -19,6 +17,8 @@ Hit the GIPHY API.
 > Make sure you **switch the protocol in the query URL from http to https**, or the app may not work properly when deployed to `Github Pages`.
 
 ## Site Functionality
+
+> Click on a superhero button or create your own button to display the 10 gifs on the screen. To animate the gif, click on any of the still gifs. Click again to change gif back to still.
 
    - [x] Create an array of strings, each one related to a topic that interests you
    - [x] App will take the topics in this array and create buttons in your HTML

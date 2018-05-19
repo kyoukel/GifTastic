@@ -4,7 +4,7 @@ $(function() {
 })
 
 // Initial array of super heroes
-var superHeroes = ["Wonder Woman", "Hulk", "Captain America", "Superman", "Thor", "Iron Man", "Spider-Man", "Guardians of the Galaxy", "Deadpool", "Batman", "X-Men", "Ant-Man", "Black Panther", "Suicide Squad", "The Flash", "Supergirl", "Green Lantern", "Daredevil", "Elektra", "She-Ra"];
+var superHeroes = ["Wonder Woman", "Hulk", "Captain America", "Superman", "Thor", "Iron Man", "Spider-Man", "Guardians of the Galaxy", "Deadpool", "Batman", "X-Men", "Ant-Man", "Black Panther"];
 
 // Function for displaying data
 function renderButtons() {
