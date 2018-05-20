@@ -26,4 +26,6 @@ Like many `APIs`, `GIPHY` requires developers to use a `key` to **access their A
    - [x] Under every gif, display its rating (PG, G, so on). This data is provided by the GIPHY API.
    - [x] Add a form to your page that takes the value from a user input box and adds it into your topics array
    - [x] Then make a function call that takes each `topic` in the array and remakes the buttons on the page.
-   - [x] Deploy your assignment to Github Pages.
+   - [x] Deploy your assignment to Github Pages. 
+   
+   ### GifTastic Deployed: https://kyoukel.github.io/GifTastic/
